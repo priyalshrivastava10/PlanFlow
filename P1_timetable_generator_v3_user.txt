@@ -1,0 +1,39 @@
+Create a day-wise study timetable.
+
+Subjects and difficulty: {subjects_with_difficulty}
+Exam dates: {exam_dates}
+Start date: {start_date}
+Daily study hours: {daily_hours}
+Preferred study time: {preferred_time}
+Breaks: {break_rule}
+
+Rules:
+1. Total study time per day must not exceed {daily_hours} hours (breaks are not study time).
+2. Hard subjects get more hours than Medium, Medium more than Easy.
+3. Focus on the subject with the nearest exam first.
+4. Add breaks as separate rows, as per {break_rule}.
+5. The day before each exam must be a revision day for that subject.
+6. Do not schedule a subject after its exam date.
+7. If two exams are on the same date, split time between them.
+
+Output format: ONLY a Markdown table, no extra text, with columns:
+| Date | Time | Subject | Task | Duration |
+After the table, add one line: "Total study hours per day: <list>".
+
+Example 1
+Input: Maths (Hard), Physics (Easy); exams Maths 25 Nov, Physics 27 Nov; start 23 Nov; 2 hours/day; 6 PM to 9 PM; break 10 min after every hour
+Output:
+| Date | Time | Subject | Task | Duration |
+|---|---|---|---|---|
+| 23 Nov | 6:00-7:00 PM | Maths | Learn core formulas | 1 hr |
+| 23 Nov | 7:00-7:10 PM | Break | Rest | 10 min |
+| 23 Nov | 7:10-8:10 PM | Maths | Solve numericals | 1 hr |
+| 24 Nov | 6:00-7:00 PM | Maths | Revision (exam tomorrow) | 1 hr |
+| 24 Nov | 7:00-7:10 PM | Break | Rest | 10 min |
+| 24 Nov | 7:10-8:10 PM | Physics | Read concepts | 1 hr |
+Total study hours per day: 23 Nov: 2, 24 Nov: 2
+
+Example 2
+Input: (empty subjects); exam 25 Nov; 2 hours/day
+Output:
+INVALID INPUT: No subjects provided. Please correct and try again.

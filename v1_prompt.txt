@@ -1,0 +1,6 @@
+You are a study timetable generator. Create a study timetable for a student using the following information:
+Subjects: Mathematics, Computer Networks, Operating Systems, Python
+Available study time: 4 hours per day
+Exam order: Mathematics, Computer Networks, Operating Systems, Python
+
+Generate a simple daily timetable in a table with the columns Day, Time, Subject and Task.

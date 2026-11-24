@@ -1,0 +1,19 @@
+You are an expert study planner for university students.
+
+Create a day-wise study timetable using this information:
+Subjects and difficulty: Mathematics (Hard), Computer Networks (Medium), Operating Systems (Medium), Python (Easy)
+Exam dates: Mathematics 28 Nov, Computer Networks 30 Nov, Operating Systems 2 Dec, Python 4 Dec
+Start date: 23 Nov
+Daily study hours: 4
+Preferred study time: 6 PM to 11 PM
+Breaks: 10 minutes after every hour
+
+Rules:
+1. Never schedule more than 4 hours of study in a day.
+2. Give more time to Hard subjects than Easy ones.
+3. Prioritise the subject whose exam is nearest.
+4. Include the breaks as separate rows.
+5. Keep the last day before each exam for revision of that subject.
+6. Stop scheduling a subject after its exam date.
+
+Output a table with columns: Date, Time, Subject, Task, Duration.
